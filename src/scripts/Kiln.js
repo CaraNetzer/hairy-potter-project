@@ -1,4 +1,4 @@
-const firePottery = (pot, temp) => {
+export const firePottery = (pot, temp) => {
     pot.fired = true;
     if(temp>2200) {
         pot.cracked = true;
@@ -8,4 +8,4 @@ const firePottery = (pot, temp) => {
     return pot;
 }
 
-module.exports = {firePottery}
+//module.exports = {firePottery}

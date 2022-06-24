@@ -1,6 +1,6 @@
 let pots = [];
 
-const toSellOrNotToSell = (pot) => {
+export const toSellOrNotToSell = (pot) => {
     if (pot.weight >= 6) {
         pot.price = 40;
     } else {
@@ -16,4 +16,4 @@ const usePottery = (potsArray) => {
     return potsArray.map(pot => ({...pot})) 
 }
 
-module.exports = {toSellOrNotToSell, usePottery}
+//module.exports = {toSellOrNotToSell, usePottery}

@@ -1,6 +1,6 @@
 let key = 0;
 
-const makePottery = (shape, weight, height) => {
+export const makePottery = (shape, weight, height) => {
     key++;
     return {
         id: key,
@@ -10,4 +10,4 @@ const makePottery = (shape, weight, height) => {
     }
 }
 
-module.exports = {makePottery} 
+//module.exports = {makePottery} 

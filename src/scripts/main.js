@@ -1,7 +1,12 @@
-//import { makePottery } from "./PotteryWheel";
-const { firePottery } = require("./Kiln.js");
+import { makePottery } from "./PotteryWheel.js";
+import { firePottery } from "./Kiln.js";
+import { toSellOrNotToSell } from "./PotteryCatalog.js";
+import { potteryList } from "./PotteryList.js";
+
+/* const { firePottery } = require("./Kiln.js");
 const {makePottery} = require("./PotteryWheel.js")
 const {toSellOrNotToSell} = require("./PotteryCatalog.js")
+const {potteryList} = require("./PotteryList.js") */
 
 let pot1 = makePottery("round","5 lbs", "7 inches");
 let pot2 = makePottery("oval","6 lbs", "9 inches");
@@ -22,4 +27,7 @@ for (const pot of pots) {
     potsToUse = toSellOrNotToSell(pot);
 }
 
-console.log(potsToUse);
+let potteryParent = document.querySelector(".potteryList");
+potteryParent.innerHTML = potteryList(potsToUse);
+
+console.log(potteryParent.innerHTML);
