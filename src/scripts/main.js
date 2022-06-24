@@ -15,15 +15,11 @@ pot3 = firePottery(pot3, 2200);
 pot4 = firePottery(pot4, 2000);
 pot5 = firePottery(pot5, 2150);
 
-pot1 = toSellOrNotToSell(pot1);
-pot2 = toSellOrNotToSell(pot2);
-pot3 = toSellOrNotToSell(pot3);
-pot4 = toSellOrNotToSell(pot4);
-pot5 = toSellOrNotToSell(pot5);
+const pots = [pot1,pot2,pot3,pot4,pot5];
+let potsToUse = [];
 
+for (const pot of pots) {
+    potsToUse = toSellOrNotToSell(pot);
+}
 
-console.log(pot1);
-console.log(pot2);
-console.log(pot3);
-console.log(pot4);
-console.log(pot5);
+console.log(potsToUse);
