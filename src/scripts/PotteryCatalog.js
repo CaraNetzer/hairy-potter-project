@@ -1,19 +1,19 @@
 let pots = [];
 
 export const toSellOrNotToSell = (pot) => {
-    if (pot.weight >= 6) {
-        pot.price = 40;
-    } else {
-        pot.price = 20;
-    }
-    if (!pot.cracked) {
+    if (pot.cracked == false) {
+        if (pot.weight >= 6) {
+            pot.price = 40;
+        } else {
+            pot.price = 20;
+        }
         pots.push(pot);
     }
-    return usePottery(pots);
+    return pot;
 }
 
-const usePottery = (potsArray) => {
-    return potsArray.map(pot => ({...pot})) 
+export const usePottery = () => {
+    return pots.map(pot => ({...pot})) 
 }
 
 //module.exports = {toSellOrNotToSell, usePottery}
